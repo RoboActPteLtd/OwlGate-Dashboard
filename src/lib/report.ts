@@ -22,6 +22,12 @@ export interface EscalationBlock {
   reason: string;
 }
 
+export interface FlakyBlock {
+  suite: string;
+  flakiness: number;
+  recommendation: string;
+}
+
 export interface VerdictBlock {
   verdict: "go" | "no-go";
   needs_human: boolean;
@@ -34,6 +40,7 @@ export interface Report {
   results: { passed: number; failed: number };
   healed: HealBlock[];
   escalated: EscalationBlock[];
+  flaky: FlakyBlock[];
   verdict: VerdictBlock;
 }
 

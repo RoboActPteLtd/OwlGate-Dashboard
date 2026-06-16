@@ -66,6 +66,18 @@
   </section>
 {/if}
 
+{#if data.flaky.length}
+  <section>
+    <h2>Flaky suites</h2>
+    {#each data.flaky as f}
+      <article class="card warn-card">
+        <h3>{f.suite} <span class="tag">{f.recommendation}</span></h3>
+        <p class="muted">historical flakiness {Math.round(f.flakiness * 100)}%</p>
+      </article>
+    {/each}
+  </section>
+{/if}
+
 {#if data.verdict.blocking.length}
   <section>
     <h2>Blocking</h2>
@@ -152,6 +164,9 @@
   }
   .card.bad {
     border-left: 4px solid #b3261e;
+  }
+  .card.warn-card {
+    border-left: 4px solid #c98a00;
   }
   .tag {
     font-size: 0.7rem;

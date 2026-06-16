@@ -24,6 +24,9 @@
       "reason": "api/contacts: failure looks functional (a real behaviour change), not a test defect — escalating"
     }
   ],
+  "flaky": [
+    { "suite": "ui/contact-form", "flakiness": 0.25, "recommendation": "stabilize" }
+  ],
   "verdict": {
     "verdict": "no-go",
     "needs_human": true,
