@@ -1,0 +1,33 @@
+{
+  "change": "PR #42 — tighten email validation",
+  "risk": {
+    "suites": ["ui/contact-form", "api/contacts"],
+    "score": 0.487,
+    "high_risk": false,
+    "untested": [],
+    "rationale": "risk 0.49 — 2 suite(s) impacted: ui/contact-form, api/contacts; tag risk 0.80; breadth 0.50; churn 0.06; coverage-gap 0.00"
+  },
+  "results": { "passed": 0, "failed": 2 },
+  "healed": [
+    {
+      "suite": "ui/contact-form",
+      "kind": "selector",
+      "confidence": 0.8,
+      "summary": "Fragile selector broke when the markup changed.",
+      "suggestion": "Replace the brittle locator `.toast-success > span` with a stable one: `getByRole(\"status\")`.",
+      "suggested_locator": "getByRole(\"status\")"
+    }
+  ],
+  "escalated": [
+    {
+      "suite": "api/contacts",
+      "reason": "api/contacts: failure looks functional (a real behaviour change), not a test defect — escalating"
+    }
+  ],
+  "verdict": {
+    "verdict": "no-go",
+    "needs_human": true,
+    "rationale": "NO-GO (human approval required) — 2 failure(s), 1 self-healed; blocking: 1 test(s) still failing after healing",
+    "blocking": ["1 test(s) still failing after healing"]
+  }
+}

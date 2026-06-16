@@ -2,23 +2,27 @@
   "name": "owlgate-dashboard",
   "version": "0.0.1",
   "private": true,
-  "description": "OwlGate release-readiness verdict board (SvelteKit + Flowbite).",
+  "description": "OwlGate release-readiness verdict board (SvelteKit, static).",
   "license": "Apache-2.0",
   "author": "Yeo Wen Qin <yeo_dev@protonmail.com>",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3",
     "@sveltejs/kit": "^2",
-    "flowbite": "^2",
-    "flowbite-svelte": "^0.46",
+    "@sveltejs/vite-plugin-svelte": "^4",
+    "@types/node": "^22",
     "svelte": "^5",
-    "tailwindcss": "^3",
+    "svelte-check": "^4",
     "typescript": "^5",
-    "vite": "^5"
+    "vite": "^5",
+    "vitest": "^2"
   }
 }
