@@ -1,0 +1,14 @@
+# Node / SvelteKit
+node_modules/
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
