@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Initial scaffold of the OwlGate verdict dashboard (SvelteKit + Flowbite).
+- Minimal GitHub Actions CI — manifest and dependency-resolution validation.
 
 ### Changed
 

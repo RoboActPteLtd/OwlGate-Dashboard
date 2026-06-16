@@ -1,5 +1,7 @@
 # owlgate-dashboard
 
+[![CI](https://github.com/RoboActPteLtd/OwlGate-Dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/RoboActPteLtd/OwlGate-Dashboard/actions/workflows/ci.yml)
+
 The release-readiness **verdict board** for OwlGate — the visual "OwlGate pass".
 It shows, per change: the risk score, which suites ran, what the Self-Healing agent
 fixed, and the final **go / no-go** verdict with its rationale and human decision.
