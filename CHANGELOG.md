@@ -10,3 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Initial scaffold of the OwlGate verdict dashboard (SvelteKit + Flowbite).
+
+### Changed
+
+- Relicensed from MIT to Apache 2.0.

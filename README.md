@@ -26,4 +26,4 @@ npm run dev        # http://localhost:5173
 
 ## License
 
-[MIT](./LICENSE)
+[Apache 2.0](./LICENSE)
